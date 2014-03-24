@@ -26,12 +26,14 @@ public class Univers {
     // #[regen=yes,id=DCE.0DE9CA4A-41F3-6BE2-3A72-8E12F18D8431]
     // </editor-fold> 
     private Univers () {
+        this.mGalaxie = new ArrayList<>();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.336037AB-1648-F410-1F87-FACAD64ADE03]
     // </editor-fold> 
     public static void getUnivers () {
+        return new Univers();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
