@@ -125,14 +125,39 @@ public class Univers {
     // #[regen=yes,id=DCE.F3836C8C-40AA-013D-A4BA-F22198BECB1F]
     // </editor-fold> 
     public ObjetCeleste getObjet(int num) {
-        return null;
+        ObjetCeleste res = null;
+        for(Galaxie g : m.Galaxie)
+        {
+            for(ObjetCeleste h : g.mEtoile)
+            {
+                if (h.id == num)
+                {
+                    res = h;
+                }
+                for (ObjetCeleste i : h.mSatellites ) {
+                    if (h.id == num)
+                    {
+                        res = h;
+                    }  
+                }
+            }
+        }
+        return res;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5F50C91B-A96E-3C2B-53E2-7CB3B04A24A1]
     // </editor-fold> 
     public ArrayList<ObjetCeleste> getObjets(Galaxie g) {
-        return null;
+        ArrayList<ObjetCeleste> res = new ArrayList<ObjetCeleste>();
+        for(ObjetCeleste h : g.mEtoile)
+        {
+                res.add(h);
+            for (ObjetCeleste i : h.mSatellites ) {
+                res.add(i);
+            }
+        }
+        return res;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
