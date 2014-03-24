@@ -42,10 +42,9 @@ class Jeudessai {
 
 		ArrayList<ObjetCeleste> test = new ArrayList<ObjetCeleste> ();
 		test =  getObjets(u.getGalaxie("VoieLactee"));
-		foreach(ObjectCeleste t : test)
+		for(ObjetCeleste t : test)
 		{
 			System.out.println(t.toString());
 		}
-    }
 	}
 }
