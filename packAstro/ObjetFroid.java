@@ -31,7 +31,7 @@ public class ObjetFroid extends ObjetCeleste {
     }
     public Galaxie getGalaxie(ObjetCeleste oc)
     {
-        return (oc.Type != 0) ? this.getGalaxie(oc.mObjetCeleste); oc.g;
+        return (oc.Type != 0) ? this.getGalaxie((ObjetFroid)oc.mObjetCeleste): (Etoile)oc.g;
     }
     public ObjetCeleste getObjetCeleste () {
         return mObjetCeleste;

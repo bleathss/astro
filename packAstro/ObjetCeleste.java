@@ -68,7 +68,7 @@ public abstract class ObjetCeleste {
     // #[regen=yes,id=DCE.2CBCF7BD-9DFC-DA8C-7A8B-7D0805427F53]
     // </editor-fold> 
     public Galaxie getGalaxie () {
-        return null;
+        return ();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
