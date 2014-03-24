@@ -9,18 +9,18 @@ public class Etoile extends ObjetCeleste {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.DB843676-FA65-FE33-054D-EE8FE9E5C345]
     // </editor-fold> 
-    private int magnitude;
+    public int magnitude;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.84EFC48A-7A55-0BD1-52AB-F3230A8F15A3]
     // </editor-fold> 
-    private char ageLettre;
+    public char ageLettre;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.0B61F30E-8527-1691-C072-3AC6FB260518]
     // </editor-fold> 
-    private int Type = 0;
-    private Galaxie g;
+    public int Type = 0;
+    public Galaxie g;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5756A2A7-2127-0DEA-DCC8-89A83C9A9635]
     // </editor-fold> 

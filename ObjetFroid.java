@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class ObjetFroid extends ObjetCeleste {
 
-    private int rayonOrbite;
-    private int diametre;
-    private int periodeRev;
-    private int Type;
-    private ObjetCeleste mObjetCeleste; /* est satellite de mObjetCeleste ? */
+    public int rayonOrbite;
+    public int diametre;
+    public int periodeRev;
+    public int Type;
+    public ObjetCeleste mObjetCeleste; /* est satellite de mObjetCeleste ? */
 
     public ObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
         super(nom, 1);

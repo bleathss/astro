@@ -8,21 +8,21 @@ import java.util.ArrayList;
 // </editor-fold> 
 public abstract class ObjetCeleste {
 
-    private ArrayList<ObjetCeleste> mSatellites;
+    public ArrayList<ObjetCeleste> mSatellites;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.3CB74937-0275-3274-3C9B-20B1686AE2CE]
     // </editor-fold> 
-    private int id;
+    public int id;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.D442F145-ACB6-9135-9A7D-D17A4D299F78]
     // </editor-fold> 
-    private String nom;
+    public String nom;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.C6CF6014-4F6B-EBA1-ED4A-D26CCD90237F]
     // </editor-fold> 
-    private int Type;
+    public int Type;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F5CEE911-2115-36A7-289B-7ED743BC9E72]
     // </editor-fold> 

@@ -10,22 +10,22 @@ public class Galaxie {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.63D594EA-41C9-F06D-5C7A-9C2A60CC1BD8]
     // </editor-fold> 
-    private ArrayList<Etoile> mEtoile;
+    public ArrayList<Etoile> mEtoile;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.1BDC431A-B6A6-52F6-671B-8E8269227E99]
     // </editor-fold> 
-    private String nom;
+    public String nom;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.1F58FB25-407C-2439-AF9F-C6793D690F9F]
     // </editor-fold> 
-    private String type;
+    public String type;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.059AD1E2-DF64-9EAD-E381-EC6C7C627D36]
     // </editor-fold> 
-    private int eloignement;
+    public int eloignement;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.9724679A-56A4-F46F-AA33-51E765911DA7]

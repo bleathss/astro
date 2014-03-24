@@ -20,7 +20,7 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.CD37DED5-7CE7-67B8-48EB-D858D0DCC532]
     // </editor-fold> 
-    private ArrayList<Galaxie> mGalaxie;
+    public ArrayList<Galaxie> mGalaxie;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.0DE9CA4A-41F3-6BE2-3A72-8E12F18D8431]
