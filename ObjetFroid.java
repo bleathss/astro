@@ -16,8 +16,8 @@ public class ObjetFroid extends ObjetCeleste {
     public ObjetCeleste getCentre () {
         return mObjetCeleste;
     }
+    
     @Override
-
     public String toString () {
         return ;
     }
