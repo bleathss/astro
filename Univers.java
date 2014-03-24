@@ -33,7 +33,7 @@ public class Univers {
     // #[regen=yes,id=DCE.336037AB-1648-F410-1F87-FACAD64ADE03]
     // </editor-fold> 
     public static void getUnivers () {
-        return new Univers();
+        return this.Univers();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
