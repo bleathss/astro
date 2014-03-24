@@ -64,10 +64,11 @@ public class Univers {
     public Galaxie getGalaxie (String nom) {
         /* On suppose que la galaxy du nom existe -- sinon ca lance une erreure vraiment pourris */
         Galaxie g = null;
-        for(g : this.mGalaxie)
+        for(Galaxie h : this.mGalaxie)
         {
-            if(g.nom == nom)
+            if(h.nom == nom)
             {
+                g = h;
                 break;
             }
         }
