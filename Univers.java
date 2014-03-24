@@ -71,7 +71,11 @@ public class Univers {
             {
                 for(ObjetCeleste temp_o : temp_e.mSatellites)
                 {
-                    big = (big == null || big.diametre < temp_o.diametre) ? temp_o : big;
+                    if (temp_o instanceof ObjetFroid )
+                    {
+                        ObjetFroid temp_of = (ObjetFroid)temp_o;
+                        big = (big == null || big.diametre < temp_of.diametre) ? temp_of : big;
+                    }
                 }
             }
         }
