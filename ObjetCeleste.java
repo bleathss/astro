@@ -8,6 +8,7 @@ import java.util.ArrayList;
 // </editor-fold> 
 public abstract class ObjetCeleste {
 
+    private ArrayList<ObjetCeleste> mSatellites;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.3CB74937-0275-3274-3C9B-20B1686AE2CE]
     // </editor-fold> 
@@ -30,8 +31,16 @@ public abstract class ObjetCeleste {
         this.nom = nom;
         this.Type = Type;
         this.id = Univers.IncrementeId();
+        /* Not sure if this is needed!!!*/
+        this.satellites = new ArrayList<>();
     }
-
+    public void addSatellite(ObjetCeleste oc)
+    {
+        if(oc.Type == 1)
+        {
+            this.mSatellites.add(oc);
+        }
+    }
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.73F730F2-66A0-9E73-516D-A8280B5645ED]
     // </editor-fold> 

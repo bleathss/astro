@@ -75,12 +75,21 @@ public class Univers {
     // #[regen=yes,id=DCE.47CA4E46-B492-C3C9-5242-9E1FD2046228]
     // </editor-fold> 
     public ObjetFroid theBigOne () {
-
-        return this.theBigOne(this.mGalaxie);
-    }
-    public ObjetFroid theBigOne(ArrayList<Galaxie> gs)
-    {
-
+        ObjetFroid big = null;
+        for(int i = 0; i < this.mGalaxie.size(); i++)
+        {
+            Galaxie temp_g = this.mGalaxie[i];
+            for(int j = 0; j < temp_g.mEtoiles.size(); j++)
+            {
+                Etoile temp_e = temp_g.mEtoiles[j];
+                for(int k = 0; k < temp_e.mSatellites.size(); k++)
+                {
+                    ObjetFroid temp_o = temp_e.mSatellites[k];
+                    big = (big == null || big.diametre < temp_o.diametre) ? temp_o : big;
+                }
+            }
+        }
+        return big;
     }
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.A9772CBB-C3DC-38FA-D9D8-C8A9BDF2BC5E]

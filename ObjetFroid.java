@@ -9,9 +9,14 @@ public class ObjetFroid extends ObjetCeleste {
     private int diametre;
     private int periodeRev;
     private int Type;
-    private ObjetCeleste mObjetCeleste;
+    private ObjetCeleste mObjetCeleste; /* est satellite de mObjetCeleste ? */
 
-    public ObjetFroid () {
+    public ObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
+        super(nom, 1);
+        this.diametre = diametre;
+        this.rayonOribte = rayonOribte;
+        this.periodeRev = period;
+        this.mObjetCeleste = oc;
     }
     public ObjetCeleste getCentre () {
         return mObjetCeleste;

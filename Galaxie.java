@@ -37,7 +37,6 @@ public class Galaxie {
         this.type = type;
         this.eloignement = eloignement;
     }
-
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.06EEFD39-C3ED-8A84-E038-D2AF7DD7FD4F]
     // </editor-fold> 
