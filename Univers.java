@@ -95,7 +95,12 @@ public class Univers {
     // #[regen=yes,id=DCE.A9772CBB-C3DC-38FA-D9D8-C8A9BDF2BC5E]
     // </editor-fold> 
     public int nbDetoiles () {
-        return 0;
+        int total = 0;
+        for(Galaxie g: this.mGalaxie)
+        {
+            total += g.ListEtoiles().size();
+        }
+        return total;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -109,6 +114,7 @@ public class Univers {
     // #[regen=yes,id=DCE.44481300-AA16-3883-565D-5F063023C981]
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
+        oc.mSatellites.add(new ObjetFroid(nom, rayonOribte, diametre, period, oc));
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
