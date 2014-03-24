@@ -42,21 +42,13 @@ public class Galaxie {
     // #[regen=yes,id=DCE.06EEFD39-C3ED-8A84-E038-D2AF7DD7FD4F]
     // </editor-fold> 
     public ArrayList<Etoile> ListeEtoiles () {
-        return null;
+        return this.mEtoile;
     }
-
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,regenBody=yes,id=DCE.44A6CBD5-BF02-EC4D-3128-F45B18D5720D]
-    // </editor-fold> 
-    public ArrayList<Etoile> getEtoile () {
-        return mEtoile;
-    }
-
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.51EAA614-C4CC-2DB5-8A56-82C5BFC7E25B]
     // </editor-fold> 
-    public void setEtoile (ArrayList<Etoile> val) {
-        this.mEtoile = val;
+    public void addEtoile (Etoile val) {
+        this.mEtoile.add(val);
     }
 
 }

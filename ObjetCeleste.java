@@ -26,7 +26,10 @@ public abstract class ObjetCeleste {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F5CEE911-2115-36A7-289B-7ED743BC9E72]
     // </editor-fold> 
-    public ObjetCeleste () {
+    public ObjetCeleste (String nom, int Type) {
+        this.nom = nom;
+        this.Type = Type;
+        this.id = Univers.IncrementeId();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 

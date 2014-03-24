@@ -24,7 +24,10 @@ public class Etoile extends ObjetCeleste {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5756A2A7-2127-0DEA-DCC8-89A83C9A9635]
     // </editor-fold> 
-    public Etoile () {
+    public Etoile (String nom, int magnitude, char ageLettre) {
+        super(nom, this.Type);
+        this.ageLettre = ageLettre;
+        this.magnitude = magnitude;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 

@@ -38,6 +38,7 @@ public class Univers {
     // #[regen=yes,regenBody=yes,id=DCE.8E9C2D94-5834-FF38-CBB0-66D08E110AFD]
     // </editor-fold> 
     public static int IncrementeId () {
+        nextId++;
         return nextId;
     }
 
@@ -59,13 +60,22 @@ public class Univers {
     // #[regen=yes,id=DCE.CEACB420-37B6-0F4E-6F65-AC4A427799FE]
     // </editor-fold> 
     public Galaxie getGalaxie (String nom) {
-        return null;
+        /* On suppose que la galaxy du nom existe -- sinon ca lance une erreure vraiment pourris */
+        for(Galaxie g : this.mGalaxie)
+        {
+            if(g.nom == nom)
+            {
+                break;
+            }
+        }
+        return g;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.47CA4E46-B492-C3C9-5242-9E1FD2046228]
     // </editor-fold> 
     public ObjetFroid theBigOne () {
+        
         return null;
     }
 
@@ -80,6 +90,7 @@ public class Univers {
     // #[regen=yes,id=DCE.7544978A-8533-AC43-7CC8-8BA85AD6BFCB]
     // </editor-fold> 
     public void creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g) {
+        g.mEtoiles.add(new Etoile(nom, magnitude, age_lettre));
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
