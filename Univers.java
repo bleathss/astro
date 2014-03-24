@@ -1,30 +1,15 @@
-
-
 import java.util.ArrayList; 
 import packAstro.Galaxie; 
-//import packAstro.List<Galaxie>;
-//import packAstro.List<ObjetCeleste>;
 import packAstro.ObjetCeleste; 
 import packAstro.ObjetFroid; 
+import packAstro.Etoile; 
 
-// <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-// #[regen=yes,id=DCE.6D25C3DC-F1E2-9A41-A03F-154D6BC67DC6]
-// </editor-fold> 
+
 public class Univers {
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.DF062E63-F4D0-47A4-B3A3-DCA9CD19FD89]
-    // </editor-fold> 
     private static int nextId = 0;
-
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.CD37DED5-7CE7-67B8-48EB-D858D0DCC532]
-    // </editor-fold> 
     public ArrayList<Galaxie> mGalaxie;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.0DE9CA4A-41F3-6BE2-3A72-8E12F18D8431]
-    // </editor-fold> 
     private Univers () {
         this.mGalaxie = new ArrayList<>();
     }
@@ -82,9 +67,9 @@ public class Univers {
         ObjetFroid big = null;
         for(Galaxie temp_g : mGalaxie)
         {
-            for(Etoile temp_e : temp_g.mEtoiles)
+            for(Etoile temp_e : temp_g.mEtoile)
             {
-                for(ObjetFroid temp_o : temp_e.mSatellites)
+                for(ObjetCeleste temp_o : temp_e.mSatellites)
                 {
                     big = (big == null || big.diametre < temp_o.diametre) ? temp_o : big;
                 }
@@ -99,7 +84,7 @@ public class Univers {
         int total = 0;
         for(Galaxie g: this.mGalaxie)
         {
-            total += g.ListEtoiles().size();
+            total += g.ListeEtoiles().size();
         }
         return total;
     }

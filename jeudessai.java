@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import packAstro.Galaxie; 
 import packAstro.ObjetCeleste; 
 import packAstro.ObjetFroid; 
+import packAstro.Etoile; 
 class Jeudessai {
 	public static Univers u;
 	public static void init()
