@@ -8,7 +8,7 @@ import java.util.ArrayList;
 // </editor-fold> 
 public abstract class ObjetCeleste {
 
-    public ArrayList<ObjetCeleste> mSatellites;
+    public ArrayList<ObjetFroid> mSatellites;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.3CB74937-0275-3274-3C9B-20B1686AE2CE]
     // </editor-fold> 
@@ -33,11 +33,11 @@ public abstract class ObjetCeleste {
         /* Not sure if this is needed!!!*/
         this.mSatellites = new ArrayList<>();
     }
-    public void addSatellite(ObjetCeleste oc)
+    public void addSatellite(ObjetFroid of)
     {
-        if(oc.Type == 1)
+        if(of.Type == 1)
         {
-            this.mSatellites.add(oc);
+            this.mSatellites.add(of);
         }
     }
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -75,14 +75,11 @@ public abstract class ObjetCeleste {
     // #[regen=yes,id=DCE.04376E58-A7E1-50A3-F0E9-1EC46BD212DE]
     // </editor-fold> 
     public int nbDeSatellites () {
-        return 0;
+        return mSatellites.size();
     }
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.59FE21B9-7859-1C14-4333-AB9E508D6ADF]
-    // </editor-fold> 
     public ArrayList<ObjetFroid> getSatellites () {
-        return null;
+        return mSatellites;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 

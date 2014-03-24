@@ -23,9 +23,9 @@ public class ObjetFroid extends ObjetCeleste {
     @Override
     public String toString () {
         return this.id + "- << " + this.nom + " >> : Planete ; Galaxie : " 
-        + this.getGalaxie(this.mObjetCeleste) + " ; diam : " + this.diametre 
-        + ", gravte autour de " + this.mObjetCeleste + " a " + this.periodeRev 
-        + "km ; " + this.mSatellites + " satellite." ;
+        + this.getGalaxie(this.mObjetCeleste).nom + " ; diam : " + this.diametre 
+        + ", gravte autour de " + this.mObjetCeleste.nom + " a " + this.periodeRev 
+        + "km ; " + this.mSatellites.size() + " satellite." ;
     }
     public Galaxie getGalaxie(ObjetCeleste oc)
     {

@@ -30,7 +30,7 @@ public class Etoile extends ObjetCeleste {
         this.magnitude = magnitude;
         this.g = g;
     }
-    
+
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.2B92B97F-896B-0DAB-7DA6-764F70C20E84]
@@ -43,7 +43,7 @@ public class Etoile extends ObjetCeleste {
     // #[regen=yes,id=DCE.5802761B-8177-359A-DC10-D0FAF890DB9C]
     // </editor-fold> 
     public String toString () {
-        return this.id + "- << " + this.nom + " >> : Etoile ; galaxie " + this.g + " : age " + this.ageLettre + " : " + this.mSatellites.size() + " Satellite(s)";
+        return this.id + "- << " + this.nom + " >> : Etoile ; Galaxie : " + this.g.nom + " : age " + this.ageLettre + " : " + this.mSatellites.size() + " Satellite(s)";
     }
 
 }

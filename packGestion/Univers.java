@@ -11,6 +11,11 @@ public class Univers {
     private static int nextId = 0;
     public ArrayList<Galaxie> mGalaxie;
 
+    public int getNextId()
+    {
+        return this.nextId;
+    }
+
     private Univers () {
         this.mGalaxie = new ArrayList<>();
     }
@@ -108,7 +113,6 @@ public class Univers {
     // #[regen=yes,id=DCE.44481300-AA16-3883-565D-5F063023C981]
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
-        System.out.println("oc : " +oc);
         oc.mSatellites.add(new ObjetFroid(nom, rayonOribte, diametre, period, oc));
          System.out.println("ajout d'objet froid : " +oc.mSatellites);
     }
@@ -116,21 +120,28 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F3836C8C-40AA-013D-A4BA-F22198BECB1F]
     // </editor-fold> 
-    public ObjetCeleste getObjet(int num) {
+    public ObjetCeleste getObjet(int num)
+    {
         ObjetCeleste res = null;
         for(Galaxie g : mGalaxie)
         {
-            for(ObjetCeleste h : g.mEtoile)
+            for(ObjetCeleste h : g.ListeEtoiles())
             {
                 if (h.id == num)
                 {
                     res = h;
                 }
                 for (ObjetCeleste i : h.getSatellites() ) {
-                    if (h.id == num)
+                    if (i.id == num)
                     {
                         res = h;
                     }  
+                    for (ObjetCeleste j : i.getSatellites() ) {
+                        if (j.id == num)
+                        {
+                            res = h;
+                        }  
+                    }
                 }
             }
         }
