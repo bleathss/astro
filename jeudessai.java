@@ -45,7 +45,7 @@ class Jeudessai {
 
 
 		ArrayList<ObjetCeleste> test = new ArrayList<ObjetCeleste>();
-		test =  getObjets(u.getGalaxie("VoieLactee"));
+		test = u.getObjets(u.getGalaxie("VoieLactee"));
 		for(ObjetCeleste t : test)
 		{
 			System.out.println(t.toString());

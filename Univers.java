@@ -80,15 +80,12 @@ public class Univers {
     // </editor-fold> 
     public ObjetFroid theBigOne () {
         ObjetFroid big = null;
-        for(int i = 0; i < this.mGalaxie.size(); i++)
+        for(Galaxie temp_g : mGalaxie)
         {
-            Galaxie temp_g = this.mGalaxie[i];
-            for(int j = 0; j < temp_g.mEtoiles.size(); j++)
+            for(Etoile temp_e : temp_g.mEtoiles)
             {
-                Etoile temp_e = temp_g.mEtoiles[j];
-                for(int k = 0; k < temp_e.mSatellites.size(); k++)
+                for(ObjetFroid temp_o : temp_e.mSatellites)
                 {
-                    ObjetFroid temp_o = temp_e.mSatellites[k];
                     big = (big == null || big.diametre < temp_o.diametre) ? temp_o : big;
                 }
             }
