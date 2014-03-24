@@ -1,3 +1,4 @@
+package packGestion;
 import java.util.ArrayList; 
 import packAstro.Galaxie; 
 import packAstro.ObjetCeleste; 
@@ -34,6 +35,7 @@ public class Univers {
     // </editor-fold> 
     public void creerGalaxie (String nom, String type, int eloignement) {
         this.mGalaxie.add(new Galaxie(nom, type, eloignement));
+        System.out.println("Galaxie cree");
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -51,10 +53,10 @@ public class Univers {
         Galaxie g = null;
         for(Galaxie h : this.mGalaxie)
         {
+
             if(h.nom == nom)
             {
                 g = h;
-                break;
             }
         }
         return g;
@@ -97,14 +99,18 @@ public class Univers {
     // #[regen=yes,id=DCE.7544978A-8533-AC43-7CC8-8BA85AD6BFCB]
     // </editor-fold> 
     public void creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g) {
-        g.mEtoiles.add(new Etoile(nom, magnitude, age_lettre));
+        Etoile e = new Etoile(nom, magnitude, age_lettre,g);
+        g.mEtoile.add(e);
+        System.out.println("ajout d'etoile : " +g.mEtoile);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.44481300-AA16-3883-565D-5F063023C981]
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
+        System.out.println("oc : " +oc);
         oc.mSatellites.add(new ObjetFroid(nom, rayonOribte, diametre, period, oc));
+         System.out.println("ajout d'objet froid : " +oc.mSatellites);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -112,7 +118,7 @@ public class Univers {
     // </editor-fold> 
     public ObjetCeleste getObjet(int num) {
         ObjetCeleste res = null;
-        for(Galaxie g : m.Galaxie)
+        for(Galaxie g : mGalaxie)
         {
             for(ObjetCeleste h : g.mEtoile)
             {
@@ -120,7 +126,7 @@ public class Univers {
                 {
                     res = h;
                 }
-                for (ObjetCeleste i : h.mSatellites ) {
+                for (ObjetCeleste i : h.getSatellites() ) {
                     if (h.id == num)
                     {
                         res = h;

@@ -3,7 +3,8 @@ import packAstro.Galaxie;
 import packAstro.ObjetCeleste; 
 import packAstro.ObjetFroid; 
 import packAstro.Etoile; 
-class Jeudessai {
+import packGestion.Univers;
+class jeudessai {
 	public static Univers u;
 	public static void init()
 	{

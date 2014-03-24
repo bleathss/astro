@@ -1,7 +1,5 @@
 package packAstro;
-
 import java.util.ArrayList;
-
 
 public class ObjetFroid extends ObjetCeleste {
 
@@ -14,7 +12,7 @@ public class ObjetFroid extends ObjetCeleste {
     public ObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
         super(nom, 1);
         this.diametre = diametre;
-        this.rayonOribte = rayonOribte;
+        this.rayonOrbite = rayonOrbite;
         this.periodeRev = period;
         this.mObjetCeleste = oc;
     }
@@ -25,13 +23,13 @@ public class ObjetFroid extends ObjetCeleste {
     @Override
     public String toString () {
         return this.id + "- << " + this.nom + " >> : Planete ; Galaxie : " 
-        + this.getGalaxie(oc.mObjetCeleste) + " ; diam : " + this.diametre 
-        + ", gravte autour de " + this.mObjetCeleste + " a " + this.periodRev 
+        + this.getGalaxie(this.mObjetCeleste) + " ; diam : " + this.diametre 
+        + ", gravte autour de " + this.mObjetCeleste + " a " + this.periodeRev 
         + "km ; " + this.mSatellites + " satellite." ;
     }
     public Galaxie getGalaxie(ObjetCeleste oc)
     {
-        return (oc.Type != 0) ? this.getGalaxie((ObjetFroid)oc.mObjetCeleste): (Etoile)oc.g;
+        return (oc.Type != 0) ? this.getGalaxie(((ObjetFroid)oc).mObjetCeleste): ((Etoile)oc).g;
     }
     public ObjetCeleste getObjetCeleste () {
         return mObjetCeleste;
