@@ -120,14 +120,14 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F3836C8C-40AA-013D-A4BA-F22198BECB1F]
     // </editor-fold> 
-    public ObjetCeleste getObjet (int num) {
+    public ObjetCeleste getObjet(int num) {
         return null;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5F50C91B-A96E-3C2B-53E2-7CB3B04A24A1]
     // </editor-fold> 
-    public ArrayList<ObjetCeleste> getObjets (Galaxie g) {
+    public ArrayList<ObjetCeleste> getObjets(Galaxie g) {
         return null;
     }
 
