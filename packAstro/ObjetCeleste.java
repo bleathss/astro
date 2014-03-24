@@ -95,10 +95,10 @@ public abstract class ObjetCeleste {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.B6B79EBD-C473-D7E1-9742-9AC5B0BE5B49]
     // </editor-fold>
-    @Override 
+    /*@Override 
     public int getType () {
         return Type;
-    }
+    }*/
 
 }
 

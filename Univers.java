@@ -61,7 +61,8 @@ public class Univers {
     // </editor-fold> 
     public Galaxie getGalaxie (String nom) {
         /* On suppose que la galaxy du nom existe -- sinon ca lance une erreure vraiment pourris */
-        for(Galaxie g : this.mGalaxie)
+        Galaxie g = null;
+        for(g : this.mGalaxie)
         {
             if(g.nom == nom)
             {
