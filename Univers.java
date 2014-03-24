@@ -75,10 +75,13 @@ public class Univers {
     // #[regen=yes,id=DCE.47CA4E46-B492-C3C9-5242-9E1FD2046228]
     // </editor-fold> 
     public ObjetFroid theBigOne () {
-        
-        return null;
-    }
 
+        return this.theBigOne(this.mGalaxie);
+    }
+    public ObjetFroid theBigOne(ArrayList<Galaxie> gs)
+    {
+
+    }
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.A9772CBB-C3DC-38FA-D9D8-C8A9BDF2BC5E]
     // </editor-fold> 
