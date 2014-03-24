@@ -1,9 +1,9 @@
 class Jeudessai {
-	Univers u;
-	public void init()
+	public static Univers u;
+	public static void init()
 	{
 		/*  ------- Initialisation Jeu D'essai (0) ------- */
-		this.u = Univers.getUnivers();
+		u = Univers.getUnivers();
 		u.creerGalaxie("VoieLactee", "spirale", 0);
 		u.creerEtoile("Soleil", 0, 'F', u.getGalaxie("VoieLactee")); //1
 		u.creerObjetFroid("Terre", 150000 , 13000 , 365 , u.getObjet(1)); //2
