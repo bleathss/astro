@@ -81,7 +81,7 @@ public abstract class ObjetCeleste {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.59FE21B9-7859-1C14-4333-AB9E508D6ADF]
     // </editor-fold> 
-    public List<ObjetFroid> getSatellites () {
+    public ArrayList<ObjetFroid> getSatellites () {
         return null;
     }
 
@@ -94,7 +94,8 @@ public abstract class ObjetCeleste {
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.B6B79EBD-C473-D7E1-9742-9AC5B0BE5B49]
-    // </editor-fold> 
+    // </editor-fold>
+    @Override 
     public int getType () {
         return Type;
     }

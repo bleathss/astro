@@ -1,4 +1,4 @@
-package Gestionnaire;
+
 
 import java.util.ArrayList; 
 import packAstro.Galaxie; 
