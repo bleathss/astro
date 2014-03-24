@@ -1,7 +1,5 @@
 package packAstro;
 
-import Gestionnaire.Univers;
-
 import java.util.ArrayList; 
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
