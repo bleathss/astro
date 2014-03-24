@@ -1,3 +1,7 @@
+import java.util.ArrayList; 
+import packAstro.Galaxie; 
+import packAstro.ObjetCeleste; 
+import packAstro.ObjetFroid; 
 class Jeudessai {
 	public static Univers u;
 	public static void init()
@@ -40,7 +44,7 @@ class Jeudessai {
 		/*  ------- Quitter (10) ------- */
 
 
-		ArrayList<ObjetCeleste> test = new ArrayList<ObjetCeleste> ();
+		ArrayList<ObjetCeleste> test = new ArrayList<ObjetCeleste>();
 		test =  getObjets(u.getGalaxie("VoieLactee"));
 		for(ObjetCeleste t : test)
 		{

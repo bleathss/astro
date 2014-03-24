@@ -32,8 +32,8 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.336037AB-1648-F410-1F87-FACAD64ADE03]
     // </editor-fold> 
-    public static Galaxie getUnivers () {
-        return this.Univers();
+    public static Univers getUnivers () {
+        return new Univers();
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
