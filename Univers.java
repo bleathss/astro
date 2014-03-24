@@ -134,7 +134,7 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.A1B2C780-3921-F88E-798F-F4C1EF9D6130]
     // </editor-fold> 
-    public ArrayList<Galaxie> getGalaxie () {
+    public ArrayList<Galaxie> getGalaxie() {
         return mGalaxie;
     }
 
