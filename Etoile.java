@@ -20,21 +20,22 @@ public class Etoile extends ObjetCeleste {
     // #[regen=yes,id=DCE.0B61F30E-8527-1691-C072-3AC6FB260518]
     // </editor-fold> 
     private int Type = 0;
-
+    private Galaxie g;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5756A2A7-2127-0DEA-DCC8-89A83C9A9635]
     // </editor-fold> 
-    public Etoile (String nom, int magnitude, char ageLettre) {
+    public Etoile (String nom, int magnitude, char ageLettre, Galaxie g) {
         super(nom, this.Type);
         this.ageLettre = ageLettre;
         this.magnitude = magnitude;
+        this.g = g;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.C4DB7ADC-8DCF-2084-DC42-B9D1AD381EC3]
     // </editor-fold> 
     public int getType () {
-        return Type;
+        return this.Type;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -48,7 +49,7 @@ public class Etoile extends ObjetCeleste {
     // #[regen=yes,id=DCE.5802761B-8177-359A-DC10-D0FAF890DB9C]
     // </editor-fold> 
     public String toString () {
-        return null;
+        return this.id + '- << ' + this.nom + ' >> : Etoile ; galaxie ' + this.g + ' : age ' + this.ageLettre + ' : ' + this.mSatellites.size() + ' Satellite(s)';
     }
 
 }

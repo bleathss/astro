@@ -23,7 +23,6 @@ public abstract class ObjetCeleste {
     // #[regen=yes,id=DCE.C6CF6014-4F6B-EBA1-ED4A-D26CCD90237F]
     // </editor-fold> 
     private int Type;
-
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F5CEE911-2115-36A7-289B-7ED743BC9E72]
     // </editor-fold> 
@@ -32,7 +31,7 @@ public abstract class ObjetCeleste {
         this.Type = Type;
         this.id = Univers.IncrementeId();
         /* Not sure if this is needed!!!*/
-        this.satellites = new ArrayList<>();
+        this.mSatellites = new ArrayList<>();
     }
     public void addSatellite(ObjetCeleste oc)
     {
