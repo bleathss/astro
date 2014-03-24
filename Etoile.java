@@ -49,7 +49,7 @@ public class Etoile extends ObjetCeleste {
     // #[regen=yes,id=DCE.5802761B-8177-359A-DC10-D0FAF890DB9C]
     // </editor-fold> 
     public String toString () {
-        return this.id + '- << ' + this.nom + ' >> : Etoile ; galaxie ' + this.g + ' : age ' + this.ageLettre + ' : ' + this.mSatellites.size() + ' Satellite(s)';
+        return this.id + "- << " + this.nom + " >> : Etoile ; galaxie " + this.g + " : age " + this.ageLettre + " : " + this.mSatellites.size() + " Satellite(s)";
     }
 
 }
