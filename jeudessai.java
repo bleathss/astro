@@ -46,16 +46,22 @@ class jeudessai {
 	{
 
 	}
+	public static void getObjet(String nomG)
+	{
+		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
+		listObjets = u.getObjets(u.getGalaxie(nomG));
+		for(ObjetCeleste u : listObjets)
+			System.out.println(u.toString());
+
+	}
 
 	public static void main (String[] args){
 		u = Univers.getUnivers();
-		/*init();
-		affCarac(1);
-		affGalaxies();*/
 		boolean pasFini = true;
 		Scanner sc = new Scanner(System.in);
 		int res;
 		int nb;
+		String temp;
 		while (pasFini)
 		{
 			System.out.println("----- MENU -----");
@@ -86,14 +92,26 @@ class jeudessai {
 					affGalaxies();
 				break;
 				case 3:
+		;			temp = sc.nextLine();
+					listGalax(u.getGalaxie(temp));
 				break;
 				case 4:
+					temp = sc.nextLine();
+					getObjet(temp);
 				break;
 				case 5:
+					System.out.println(u.nbDetoiles());
 				break;
 				case 6:
+					System.out.println(u.theBigOne().toString());
 				break;
 				case 7:
+					//creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g)
+					String nom = sc.nextLine();
+					int magnitude = sc.nextInt();
+					char age_lettre = sc.nextChar(); //Ca marche, ca ?
+					test = sc.nextLine();
+					u.creerEtoile(nom, magnitude, age_lettre, u.getGalaxie(test));
 				break;
 				case 8:
 				break;
