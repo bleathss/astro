@@ -114,10 +114,11 @@ class jeudessai {
 					System.out.print("Magnitude de l'étoile : ");
 					int magnitude = sc.nextInt();
 					System.out.print("Age lettre de l'étoile : ");
-					char age_lettre = sc.charAt(0); //Ca marche, ca ?
+					String s = sc.nextLine();
+					char age_lettre = s.charAt(0); //Ca marche, ca ?
 					System.out.print("Nom de la Galaxie : ");
-					test = sc.nextLine();
-					u.creerEtoile(nom, magnitude, age_lettre, u.getGalaxie(test));
+					temp = sc.nextLine();
+					u.creerEtoile(nom, magnitude, age_lettre, u.getGalaxie(temp));
 				break;
 				case 8:
 				break;

@@ -9,7 +9,7 @@ public class ObjetFroid extends ObjetCeleste {
     public int Type;
     public ObjetCeleste mObjetCeleste; /* est satellite de mObjetCeleste ? */
 
-    public ObjetFroid (String nom, int rayonOribte, int diametre, int period, ObjetCeleste oc) {
+    public ObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
         super(nom, 1);
         this.diametre = diametre;
         this.rayonOrbite = rayonOrbite;
@@ -19,7 +19,6 @@ public class ObjetFroid extends ObjetCeleste {
     public ObjetCeleste getCentre () {
         return mObjetCeleste;
     }
-    
     @Override
     public String toString () {
         return this.id + "- << " + this.nom + " >> : Planete ; Galaxie : " 
