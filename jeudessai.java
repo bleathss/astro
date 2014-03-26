@@ -4,7 +4,7 @@ import packAstro.ObjetCeleste;
 import packAstro.ObjetFroid; 
 import packAstro.Etoile; 
 import packGestion.Univers;
-import java.util.Scanner;
+import java.util.*;
 class jeudessai {
 	public static Univers u;
 	public static void init()
@@ -44,14 +44,17 @@ class jeudessai {
 	}
 	public static void listGalax(Galaxie g)
 	{
-
-	}
-	public static void getObjet(String nomG)
-	{
 		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
-		listObjets = u.getObjets(u.getGalaxie(nomG));
+		listObjets = u.getObjets(g);
 		for(ObjetCeleste u : listObjets)
 			System.out.println(u.toString());
+	}
+	public static void getObjet(String nomO)
+	{
+/*		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
+		listObjets = u.getObjets(u.getGalaxie(nom));
+		for(ObjetCeleste u : listObjets)
+			System.out.println(u.toString());*/
 
 	}
 
