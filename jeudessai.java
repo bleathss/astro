@@ -4,7 +4,7 @@ import packAstro.ObjetCeleste;
 import packAstro.ObjetFroid; 
 import packAstro.Etoile; 
 import packGestion.Univers;
-import java.util.*;
+import java.util.Scanner;
 class jeudessai {
 	public static Univers u;
 	public static void init()
@@ -54,7 +54,7 @@ class jeudessai {
 		affGalaxies();*/
 		boolean pasFini = true;
 		Scanner sc = new Scanner(System.in);
-		int res = 0;
+		int res;
 		int nb;
 		while (pasFini)
 		{
@@ -72,6 +72,7 @@ class jeudessai {
 			System.out.println("10. Quitter");
 
 			res = sc.nextInt();
+			System.out.println("hello");
 			switch(res)
 			{
 				case 0:
@@ -80,6 +81,23 @@ class jeudessai {
 				case 1:
 					nb = sc.nextInt();
 					affCarac(nb);
+				break;
+				case 2:
+					affGalaxies();
+				break;
+				case 3:
+				break;
+				case 4:
+				break;
+				case 5:
+				break;
+				case 6:
+				break;
+				case 7:
+				break;
+				case 8:
+				break;
+				case 9:
 				break;
 				case 10:
 					pasFini = false;
