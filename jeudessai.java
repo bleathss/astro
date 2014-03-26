@@ -76,24 +76,24 @@ class jeudessai {
 			System.out.println("8. Ajouter un nouvel objet froid a une etoile ou a un objet froid");
 			System.out.println("9. Ajouter une galaxie (nom, type, eloignement)");
 			System.out.println("10. Quitter");
-
+			System.out.print("Votre choix : ");
 			res = sc.nextInt();
-			System.out.println("hello");
+			
 			switch(res)
 			{
-				case 0:
+				case 0: //Marche !
 					init();
 				break;
-				case 1:
+				case 1: //Marche !
 					nb = sc.nextInt();
 					affCarac(nb);
 				break;
-				case 2:
+				case 2: //Marche !
 					affGalaxies();
 				break;
 				case 3:
 					System.out.print("Nom de la Galaxie : ");
-		;			temp = sc.nextLine();
+					temp = sc.nextLine();
 					listGalax(u.getGalaxie(temp));
 				break;
 				case 4:
