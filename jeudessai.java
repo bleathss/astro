@@ -92,10 +92,12 @@ class jeudessai {
 					affGalaxies();
 				break;
 				case 3:
+					System.out.print("Nom de la Galaxie : ");
 		;			temp = sc.nextLine();
 					listGalax(u.getGalaxie(temp));
 				break;
 				case 4:
+					System.out.print("Nom de la Galaxie : ");
 					temp = sc.nextLine();
 					getObjet(temp);
 				break;
@@ -107,9 +109,13 @@ class jeudessai {
 				break;
 				case 7:
 					//creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g)
+					System.out.print("Nom de l'étoile : ");
 					String nom = sc.nextLine();
+					System.out.print("Magnitude de l'étoile : ");
 					int magnitude = sc.nextInt();
-					char age_lettre = sc.nextChar(); //Ca marche, ca ?
+					System.out.print("Age lettre de l'étoile : ");
+					char age_lettre = sc.charAt(0); //Ca marche, ca ?
+					System.out.print("Nom de la Galaxie : ");
 					test = sc.nextLine();
 					u.creerEtoile(nom, magnitude, age_lettre, u.getGalaxie(test));
 				break;
