@@ -60,7 +60,6 @@ public class Univers {
         {
             if(h.nom.contains(name))
             {
-                 System.out.println(h.nom+"---"+name);
                 g = h;
             }
         }
@@ -106,7 +105,6 @@ public class Univers {
     public void creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g) {
         Etoile e = new Etoile(nom, magnitude, age_lettre,g);
         g.mEtoile.add(e);
-        System.out.println("ajout d'etoile : " +g.mEtoile);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -114,7 +112,6 @@ public class Univers {
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
         oc.mSatellites.add(new ObjetFroid(nom, rayonOrbite, diametre, period, oc));
-         System.out.println("ajout d'objet froid : " +oc.mSatellites);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -122,12 +119,17 @@ public class Univers {
     // </editor-fold> 
     public ObjetCeleste getObjet(int num)
     {
-        Boolean stop = false;
         ObjetCeleste res = null;
         for(Galaxie g : mGalaxie)
         {
             for(ObjetCeleste h : g.ListeEtoiles())
             {
+                res = this.getCeleste(num, h);
+                if(res != null)
+                {
+                    break;
+                }
+            /*
                 if (h.id == num)
                 {
                     res = h;
@@ -145,12 +147,35 @@ public class Univers {
                             break;
                         }  
                     }
+                }*/
+            }
+            if(res != null)
+            {
+                break;
+            }
+        }
+        return res;
+    }
+    public ObjetCeleste getCeleste(int num, ObjetCeleste oc)
+    {
+        ObjetCeleste res = null;
+        if(oc.id == num)
+        {
+            res = oc;
+        }
+        else
+        {
+            for (ObjetCeleste h : oc.mSatellites ) 
+            {
+                res = getCeleste(num, h);
+                if(res != null)
+                {
+                    break;
                 }
             }
         }
         return res;
     }
-
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5F50C91B-A96E-3C2B-53E2-7CB3B04A24A1]
     // </editor-fold> 

@@ -43,9 +43,10 @@ public abstract class ObjetCeleste {
             return "Lune";
         return "";
     }
+    /*
     public Galaxie getGalaxie () {
-        return if(this.Type == 0);
-    }
+        return this.Type == 0;
+    }*/
     public int nbDeSatellites () {
         return mSatellites.size();
     }

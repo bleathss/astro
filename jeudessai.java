@@ -40,7 +40,7 @@ class jeudessai {
 	{
 		for(Galaxie g : u.mGalaxie)
 		{
-			System.out.println("nom : "+g.nom+"; Type : "+g.type+"; Eloignement : "+g.eloignement+";");
+			System.out.println(g.toString());
 		}
 	}
 	public static void listGalax(Galaxie g)
@@ -50,11 +50,11 @@ class jeudessai {
 		for(ObjetCeleste u : listObjets)
 			System.out.println(u.toString());
 	}
-	public static void getObjet(String nomO)
+	public static void getObjet(int nb)
 	{
-		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
-		listObjets = u.getObjets(u.getGalaxie(nomO));
-		for(ObjetCeleste u : listObjets)
+		ArrayList<ObjetFroid> listObjets = new ArrayList<ObjetFroid>();
+		listObjets = u.getObjet(nb).mSatellites;
+		for(ObjetFroid u : listObjets)
 			System.out.println(u.toString());
 
 	}
@@ -109,8 +109,8 @@ class jeudessai {
 				case 4:
 					System.out.print("Nom de la Galaxie : ");
 					sc = new Scanner(System.in);
-					temp = sc.nextLine();
-					getObjet(temp);
+					nb = sc.nextInt();
+					getObjet(nb);
 				break;
 				case 5:
 					System.out.println("Il y a "+u.nbDetoiles()+ " etoile(s)");

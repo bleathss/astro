@@ -30,6 +30,10 @@ public class Galaxie {
     public void addEtoile (Etoile val) {
         this.mEtoile.add(val);
     }
+    public String toString()
+    {
+        return "nom : "+this.nom+"; Type : "+this.type+"; Eloignement : "+this.eloignement+" Etoiles : "+ this.mEtoile.size();
+    }
 
 }
 

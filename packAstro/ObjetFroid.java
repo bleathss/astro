@@ -16,20 +16,18 @@ public class ObjetFroid extends ObjetCeleste {
     //4 : lune :satellite d'un objet different d'une etoile (ex : lune)
 
     public ObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
+        super(nom, 0);
 
         this.mObjetCeleste = oc;
         this.diametre = diametre;
-
-        super(nom, this.getType());
-        
         this.rayonOrbite = rayonOrbite;
         this.periodeRev = period;
-        
+        this.Type = this.setType();
     }
-    public int getType()
+    public int setType()
     {
         int temp = 4;
-        if(this.oc.nom == "Soleil")
+        if(this.mObjetCeleste.nom == "Soleil")
         {
             if(this.diametre > 6000)
             {
@@ -41,7 +39,7 @@ public class ObjetFroid extends ObjetCeleste {
             }
 
         }
-        else if(this.oc.Type == 0)
+        else if(this.mObjetCeleste.Type == 0)
         {
             temp = 3;
         }
