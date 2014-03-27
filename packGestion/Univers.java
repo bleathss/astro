@@ -53,14 +53,14 @@ public class Univers {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.CEACB420-37B6-0F4E-6F65-AC4A427799FE]
     // </editor-fold> 
-    public Galaxie getGalaxie (String nom) {
-        /* On suppose que la galaxy du nom existe -- sinon ca lance une erreure vraiment pourris */
+    public Galaxie getGalaxie (String name) {
+        /* On suppose que la galaxie du nom existe -- sinon ca renvoit null */
         Galaxie g = null;
         for(Galaxie h : this.mGalaxie)
         {
-
-            if(h.nom == nom)
+            if(h.nom.contains(name))
             {
+                 System.out.println(h.nom+"---"+name);
                 g = h;
             }
         }

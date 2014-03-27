@@ -88,6 +88,7 @@ class jeudessai {
 					init();
 				break;
 				case 1: //Marche !
+					System.out.print("Numero identifiant : ");
 					nb = sc.nextInt();
 					affCarac(nb);
 				break;
@@ -96,8 +97,13 @@ class jeudessai {
 				break;
 				case 3:
 					System.out.print("Nom de la Galaxie : ");
+					sc = new Scanner(System.in);
 					temp = sc.nextLine();
-					listGalax(u.getGalaxie(temp));
+					System.out.println("Galaxie : "+temp);
+					if (u.getGalaxie(temp) != null)
+						listGalax(u.getGalaxie(temp));
+					else
+						System.out.println("Galaxie non trouvee");
 				break;
 				case 4:
 					System.out.print("Nom de la Galaxie : ");
