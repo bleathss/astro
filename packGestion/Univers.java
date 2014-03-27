@@ -11,9 +11,9 @@ public class Univers {
     private static int nextId = 0;
     public ArrayList<Galaxie> mGalaxie;
 
-    public int getNextId()
+    public static int getId()
     {
-        return this.nextId;
+        return nextId;
     }
 
     private Univers () {
@@ -114,6 +114,7 @@ public class Univers {
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
         oc.mSatellites.add(new ObjetFroid(nom, rayonOrbite, diametre, period, oc));
+         System.out.println("ajout d'objet froid : " +oc.mSatellites);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -121,6 +122,7 @@ public class Univers {
     // </editor-fold> 
     public ObjetCeleste getObjet(int num)
     {
+        Boolean stop = false;
         ObjetCeleste res = null;
         for(Galaxie g : mGalaxie)
         {
@@ -133,12 +135,14 @@ public class Univers {
                 for (ObjetCeleste i : h.getSatellites() ) {
                     if (i.id == num)
                     {
-                        res = h;
+                        res = i;
+                        break;
                     }  
                     for (ObjetCeleste j : i.getSatellites() ) {
                         if (j.id == num)
                         {
-                            res = h;
+                            res = j;
+                            break;
                         }  
                     }
                 }
@@ -154,14 +158,21 @@ public class Univers {
         ArrayList<ObjetCeleste> res = new ArrayList<ObjetCeleste>();
         for(ObjetCeleste h : g.mEtoile)
         {
-                res.add(h);
-            for (ObjetCeleste i : h.mSatellites ) {
-                res.add(i);
-            }
+                this.getAllSatellites(h, res);
         }
         return res;
     }
-
+    public void getAllSatellites(ObjetCeleste s, ArrayList<ObjetCeleste> res)
+    {
+        res.add(s);
+        if(s.mSatellites.size() > 0)
+        {
+            for(ObjetCeleste sat : s.mSatellites)
+            {
+                getAllSatellites(sat, res);
+            }
+        }
+    }
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.A1B2C780-3921-F88E-798F-F4C1EF9D6130]
     // </editor-fold> 
