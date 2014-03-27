@@ -63,8 +63,8 @@ class jeudessai {
 		boolean pasFini = true;
 		Scanner sc = new Scanner(System.in);
 		int res;
-		int nb;
-		String temp;
+		int nb, s, d, p, id;
+		String temp, str, nom;
 		while (pasFini)
 		{
 			System.out.println("----- MENU -----");
@@ -113,19 +113,37 @@ class jeudessai {
 				case 7:
 					//creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g)
 					System.out.print("Nom de l'étoile : ");
-					String nom = sc.nextLine();
+					nom = sc.nextLine();
 					System.out.print("Magnitude de l'étoile : ");
-					int magnitude = sc.nextInt();
+					s = sc.nextInt();
 					System.out.print("Age lettre de l'étoile : ");
-					String s = sc.nextLine();
-					char age_lettre = s.charAt(0); //Ca marche, ca ?
+					str = sc.nextLine();
+					char age_lettre = str.charAt(0);
 					System.out.print("Nom de la Galaxie : ");
 					temp = sc.nextLine();
-					u.creerEtoile(nom, magnitude, age_lettre, u.getGalaxie(temp));
+					u.creerEtoile(nom, s, age_lettre, u.getGalaxie(temp));
 				break;
 				case 8:
+					System.out.print("Nom du satellite : ");
+					nom = sc.nextLine();
+					System.out.print("Rayon de l'orbite : ");
+					s = sc.nextInt();
+					System.out.print("Diametre ");
+					d = sc.nextInt();
+					System.out.print("Periode ");
+					p = sc.nextInt();
+					System.out.print("Numero de l'objet celeste : (max : "+u.getNextId()+" )");
+					id = sc.nextInt();
+					u.creerObjetFroid(nom, s, d, p, u.getObjet(id));
 				break;
 				case 9:
+					System.out.print("Nom de la galaxie : ");
+					nom = sc.nextLine();
+					System.out.print("Type de la galaxie : ");
+					str = sc.nextLine();
+					System.out.print("eloignement : ");
+					s = sc.nextInt();
+					u.creerGalaxie (nom, str, s);
 				break;
 				case 10:
 					pasFini = false;
