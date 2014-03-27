@@ -9,6 +9,7 @@ class jeudessai {
 	public static Univers u;
 	public static void init()
 	{
+
 		/*  ------- Initialisation Jeu D'essai (0) ------- */
 		
 		u.creerGalaxie("VoieLactee", "spirale", 0);
@@ -21,7 +22,7 @@ class jeudessai {
 
 		u.creerObjetFroid("Phobos", 150 , 500 , 40 , u.getObjet(4)); //5
 
-		u.creerObjetFroid("Pluton", 1200000 , 50000 , 900 , u.getObjet(1)); //6
+		u.creerObjetFroid("Pluton", 1200000 , 4000 , 900 , u.getObjet(1)); //6
 
 		u.creerEtoile("Sirius", 2, 'B', u.getGalaxie("VoieLactee")); //7
 
@@ -51,10 +52,10 @@ class jeudessai {
 	}
 	public static void getObjet(String nomO)
 	{
-/*		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
-		listObjets = u.getObjets(u.getGalaxie(nom));
+		ArrayList<ObjetCeleste> listObjets = new ArrayList<ObjetCeleste>();
+		listObjets = u.getObjets(u.getGalaxie(nomO));
 		for(ObjetCeleste u : listObjets)
-			System.out.println(u.toString());*/
+			System.out.println(u.toString());
 
 	}
 
@@ -69,10 +70,10 @@ class jeudessai {
 		{
 			System.out.println("----- MENU -----");
 			System.out.println("O. Initialiser le systeme avec le jeu d'essai ci-dessous.");
-			System.out.println("1. Afficher les caracteristiques d'un objet. Max : "+u.getNextId());
+			System.out.println("1. Afficher les caracteristiques d'un objet. Max : "+Univers.getId());
 			System.out.println("2. Lister toutes les galaxies : nom, type, eloigement");
-			System.out.println("3. Lister tous les objets de la galaxie x");
-			System.out.println("4. Lister les satellites de l'objet x");
+			System.out.println("3. Lister tous les objets de la galaxie x ( y compris lunes) ");
+			System.out.println("4. Lister les satellites de l'objet x (étoile, planete) ");
 			System.out.println("5. Afficher le nb total d'etoiles repertoriees dans l'univers");
 			System.out.println("6. Afficher les caracteristiques du plus gros objet froid");
 			System.out.println("7. Ajouter une nouvelle etoile");
@@ -89,6 +90,7 @@ class jeudessai {
 				break;
 				case 1: //Marche !
 					System.out.print("Numero identifiant : ");
+					sc = new Scanner(System.in);
 					nb = sc.nextInt();
 					affCarac(nb);
 				break;
@@ -146,7 +148,7 @@ class jeudessai {
 					System.out.print("Periode : ");
 					sc = new Scanner(System.in);
 					p = sc.nextInt();
-					System.out.print("Numero de l'objet celeste : (max : "+u.getNextId()+" )");
+					System.out.print("Numero de l'objet celeste : (max : "+Univers.getId()+" )");
 					sc = new Scanner(System.in);
 					id = sc.nextInt();
 					u.creerObjetFroid(nom, s, d, p, u.getObjet(id));

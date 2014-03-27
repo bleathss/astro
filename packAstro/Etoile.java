@@ -4,7 +4,6 @@ public class Etoile extends ObjetCeleste {
 
     public int magnitude;
     public char ageLettre;
-    public static int Type = 0;
     public Galaxie g;
 
     public Etoile (String nom, int magnitude, char ageLettre, Galaxie g) {

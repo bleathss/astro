@@ -114,7 +114,6 @@ public class Univers {
     // </editor-fold> 
     public void creerObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
         oc.mSatellites.add(new ObjetFroid(nom, rayonOrbite, diametre, period, oc));
-         System.out.println("ajout d'objet froid : " +oc.mSatellites);
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 

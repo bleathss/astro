@@ -31,20 +31,20 @@ public abstract class ObjetCeleste {
         return null;
     }
     public String getType () {
-        if (this.Type ==1)
+        if (this.Type ==0)
             return "Etoile";
-        if (this.Type ==2)
+        if (this.Type ==1)
             return "Planete";
-        if (this.Type ==3)
+        if (this.Type ==2)
             return "Planete naine";
-        if (this.Type ==4)
+        if (this.Type ==3)
             return "ExoPlanete";
         if (this.Type ==4)
             return "Lune";
         return "";
     }
     public Galaxie getGalaxie () {
-        return null;
+        return if(this.Type == 0);
     }
     public int nbDeSatellites () {
         return mSatellites.size();
@@ -56,14 +56,5 @@ public abstract class ObjetCeleste {
     public void setType (int val) {
         this.Type = val;
     }
-
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,regenBody=yes,id=DCE.B6B79EBD-C473-D7E1-9742-9AC5B0BE5B49]
-    // </editor-fold>
-    /*@Override 
-    public int getType () {
-        return Type;
-    }*/
-
 }
 

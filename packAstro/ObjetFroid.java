@@ -6,22 +6,53 @@ public class ObjetFroid extends ObjetCeleste {
     public int rayonOrbite;
     public int diametre;
     public int periodeRev;
-    public int Type;
     public ObjetCeleste mObjetCeleste; /* est satellite de mObjetCeleste ? */
 
+    //Types :
+    //0 : etoile
+    //1 : planete >6.000km + satellite du soleil
+    //2 : planete naine < 6.000km + satellite du soleil
+    //3 : exoplanete satellite d'une étoile différente du soleil
+    //4 : lune :satellite d'un objet different d'une etoile (ex : lune)
+
     public ObjetFroid (String nom, int rayonOrbite, int diametre, int period, ObjetCeleste oc) {
-        super(nom, 1);
+
+        this.mObjetCeleste = oc;
         this.diametre = diametre;
+
+        super(nom, this.getType());
+        
         this.rayonOrbite = rayonOrbite;
         this.periodeRev = period;
-        this.mObjetCeleste = oc;
+        
+    }
+    public int getType()
+    {
+        int temp = 4;
+        if(this.oc.nom == "Soleil")
+        {
+            if(this.diametre > 6000)
+            {
+                temp = 1;
+            }
+            else
+            {
+                temp = 2;
+            }
+
+        }
+        else if(this.oc.Type == 0)
+        {
+            temp = 3;
+        }
+        return temp;
     }
     public ObjetCeleste getCentre () {
         return mObjetCeleste;
     }
     @Override
     public String toString () {
-        return this.id + "- << " + this.nom + " >> : Planete ; Galaxie : " 
+        return this.id + "- << " + this.nom + " >> : "+ this.getType() +" ; Galaxie : " 
         + this.getGalaxie(this.mObjetCeleste).nom + " ; diam : " + this.diametre 
         + ", gravte autour de " + this.mObjetCeleste.nom + " a " + this.periodeRev 
         + "km ; " + this.mSatellites.size() + " satellite." ;
