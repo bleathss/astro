@@ -99,7 +99,6 @@ class jeudessai {
 					System.out.print("Nom de la Galaxie : ");
 					sc = new Scanner(System.in);
 					temp = sc.nextLine();
-					System.out.println("Galaxie : "+temp);
 					if (u.getGalaxie(temp) != null)
 						listGalax(u.getGalaxie(temp));
 					else
@@ -107,11 +106,12 @@ class jeudessai {
 				break;
 				case 4:
 					System.out.print("Nom de la Galaxie : ");
+					sc = new Scanner(System.in);
 					temp = sc.nextLine();
 					getObjet(temp);
 				break;
 				case 5:
-					System.out.println(u.nbDetoiles());
+					System.out.println("Il y a "+u.nbDetoiles()+ " etoile(s)");
 				break;
 				case 6:
 					System.out.println(u.theBigOne().toString());
@@ -119,35 +119,47 @@ class jeudessai {
 				case 7:
 					//creerEtoile (String nom, int magnitude, char age_lettre, Galaxie g)
 					System.out.print("Nom de l'étoile : ");
+					sc = new Scanner(System.in);
 					nom = sc.nextLine();
 					System.out.print("Magnitude de l'étoile : ");
+					sc = new Scanner(System.in);
 					s = sc.nextInt();
 					System.out.print("Age lettre de l'étoile : ");
+					sc = new Scanner(System.in);
 					str = sc.nextLine();
 					char age_lettre = str.charAt(0);
 					System.out.print("Nom de la Galaxie : ");
+					sc = new Scanner(System.in);
 					temp = sc.nextLine();
 					u.creerEtoile(nom, s, age_lettre, u.getGalaxie(temp));
 				break;
 				case 8:
 					System.out.print("Nom du satellite : ");
+					sc = new Scanner(System.in);
 					nom = sc.nextLine();
 					System.out.print("Rayon de l'orbite : ");
+					sc = new Scanner(System.in);
 					s = sc.nextInt();
-					System.out.print("Diametre ");
+					System.out.print("Diametre : ");
+					sc = new Scanner(System.in);
 					d = sc.nextInt();
-					System.out.print("Periode ");
+					System.out.print("Periode : ");
+					sc = new Scanner(System.in);
 					p = sc.nextInt();
 					System.out.print("Numero de l'objet celeste : (max : "+u.getNextId()+" )");
+					sc = new Scanner(System.in);
 					id = sc.nextInt();
 					u.creerObjetFroid(nom, s, d, p, u.getObjet(id));
 				break;
 				case 9:
 					System.out.print("Nom de la galaxie : ");
+					sc = new Scanner(System.in);
 					nom = sc.nextLine();
 					System.out.print("Type de la galaxie : ");
+					sc = new Scanner(System.in);
 					str = sc.nextLine();
 					System.out.print("eloignement : ");
+					sc = new Scanner(System.in);
 					s = sc.nextInt();
 					u.creerGalaxie (nom, str, s);
 				break;
